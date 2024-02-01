@@ -1,18 +1,18 @@
 # ConvComMoji
 
-An extension of the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification that outlines possible use and application of emojis. It follows most of the original specification of Conventional Commits v1.0.0 defined [here](https://www.conventionalcommits.org/en/v1.0.0/#specification), but is more opinionated about what types should be used.
+An extension of the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification that outlines possible use and application of emojis, inspired by [gitmoji](https://gitmoji.dev). It follows most of the original specification of Conventional Commits v1.0.0 defined [here](https://www.conventionalcommits.org/en/v1.0.0/#specification), but is more opinionated about what types should be used.
 
 ## Specification
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
 
-1. Commits MUST be prefixed with a type, which consists of a emoji, `✨`, `🐛`, etc., followed by the OPTIONAL scope, OPTIONAL `💥`, and REQUIRED terminal space.
+1. Commits MUST be prefixed with a type, which consists of a emoji, `✨`, `🐛`, etc., followed by the REQUIRED terminal space, OPTIONAL scope and OPTIONAL `💥`.
 1. The type `✨` MUST be used when a commit adds a new feature to your application or library.
 1. The type `⚡️` MUST be used when a commit changes feature logic in your application or library while not being a fix.
 1. The type `🔥` MUST be used when a commit removes feature from your application or library.
 1. The type `🐛` MUST be used when a commit represents a bug fix for your application.
-1. A scope MAY be provided after a type. A scope MUST consist of a noun describing a section of the codebase surrounded by parenthesis, e.g., `🐛(parser)`
-1. A description MUST immediately follow the space after the type/scope prefix. The description is a short summary of the code changes, e.g., `🐛` array parsing issue when multiple spaces were contained in string.
+1. A scope MAY be provided after a type. A scope MUST consist of a noun describing a section of the codebase surrounded by parenthesis and ending with colon and terminal space, e.g., `🐛 (parser): `
+1. A description MUST immediately follow the space after the type/scope prefix. The description is a short summary of the code changes, e.g., `🐛 array parsing issue when multiple spaces were contained in string`.
 1. A longer commit body MAY be provided after the short description, providing additional contextual information about the code changes. The body MUST begin one blank line after the description.
 1. A commit body is free-form and MAY consist of any number of newline separated paragraphs.
 1. One or more footers MAY be provided one blank line after the body. Each footer MUST consist of a word token, followed by either a `:<space>` or `<space>#` separator, followed by a string value (this is inspired by the git trailer convention).
@@ -44,5 +44,3 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 -   begin: 🎉
 -   breaking change: 💥
 -   wip: 🚧 - in specification it should be special case same as breaking change, warning to not interact with this branch/commit
-
-If you are looking for more detailed description of changes made with commits you should check out [gitmoji](https://gitmoji.dev)
